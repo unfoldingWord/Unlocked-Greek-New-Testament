@@ -10,7 +10,7 @@ The objectives of this project are to provide a Greek New Testament that:
 
 **Greek New Testament texts**
 
-  - Nestle1904: https://sites.google.com/site/nestle1904/home, parsed & tagged: https://github.com/biblicalhumanities/Nestle1904
+  - **Nestle1904** is the base text of the project: https://github.com/biblicalhumanities/Nestle1904
   - Robinson-Pierpont: https://github.com/biblicalhumanities/Byzantine-Textform-Robinson-Pierpont-2005;
   - SBLGNT: https://github.com/biblicalhumanities/sblgnt;
   - Tischendorf: https://github.com/biblicalhumanities/tischendorf; 
