@@ -1,0 +1,33 @@
+﻿<ScriptureText>
+  <Versification>4</Versification>
+  <CreatedWithPTW6>T</CreatedWithPTW6>
+  <Name>WHT</Name>
+  <Encoding>65001</Encoding>
+  <TranslationInfo>Standard::</TranslationInfo>
+  <Language>GREEK</Language>
+  <DefaultFont>Galatia SIL</DefaultFont>
+  <DefaultFontSize>14</DefaultFontSize>
+  <FileNamePrePart />
+  <FileNamePostPart>WHT.SFM</FileNamePostPart>
+  <FileNameBookNameForm>41MAT</FileNameBookNameForm>
+  <FileNameChapterNumberForm />
+  <StyleSheet>usfm.sty</StyleSheet>
+  <ChapterMarker>c</ChapterMarker>
+  <VerseMarker>v</VerseMarker>
+  <AssociatedLexicalProject />
+  <FullName>Westcott-Hort Greek NT in USFM</FullName>
+  <Copyright>CC-BY-SA</Copyright>
+  <Directory>C:\My Paratext Projects\WHT</Directory>
+  <LanguageIsoCode />
+  <EthnologueCode />
+  <BiblicalTermsListSetting>Major::BiblicalTerms.xml</BiblicalTermsListSetting>
+  <Editable>T</Editable>
+  <NeedsEnglishLanguageFix>No</NeedsEnglishLanguageFix>
+  <NeedsPortugueseLanguageFix>No</NeedsPortugueseLanguageFix>
+  <InitialImportBooksDirectory>D:\uW\GNT</InitialImportBooksDirectory>
+  <Guid>1872b32f72b89e51d9ee7486c1e093f96acb4e0d</Guid>
+  <BooksPresent>000000000000000000000000000000000000000111111111111111111111111111000000000000000000000000000000000000000000000000000000000</BooksPresent>
+  <TextHasChanged>F</TextHasChanged>
+  <LastBackedUp>2016Apr01</LastBackedUp>
+  <Naming PrePart="" PostPart="WHT.SFM" BookNameForm="41MAT" ChapterNumberForm="" />
+</ScriptureText>
