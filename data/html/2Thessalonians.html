@@ -3,14 +3,33 @@
         <head>
           <meta charset='utf-8'/>
           <style>
-            div.chapters {
-              -webkit-columns: auto 2; /* Chrome, Safari, Opera */
-              -moz-columns: auto 2; /* Firefox */
-              columns: auto 2;
+            @media screen {
+              div.chapter {
+                margin-bottom: 3em;
+                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+                -moz-columns: auto 2; /* Firefox */
+                columns: auto 2;
+              }
+              p {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
+              }
             }
             @media print {
+              div.chapters {
+                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+                -moz-columns: auto 2; /* Firefox */
+                columns: auto 2;
+                widows: 3;
+                orphans: 3;
+              }
               p { page-break-inside: avoid; }
-              div.verses { page-break-before: never; }
+              div.orphan {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid; 
+              }
             }
           </style>
         </head>
@@ -19,10 +38,11 @@
 	<h1>2Thessalonians</h1>
 	<div class='chapters'>
 		<div class='chapter'>
-			<h2>Chapter 1</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 1</h2>
 				<p><sup>1</sup> παυλος και σιλουανος και τιμοθεος τη εκκλησια θεσσαλονικεων εν θεω πατρι ημων και κυριω ιησου χριστω
 				</p>
+			</div>
 				<p><sup>2</sup> χαρις υμιν και ειρηνη απο θεου πατρος ημων {VAR2: [ημων] } και κυριου ιησου χριστου
 				</p>
 				<p><sup>3</sup> ευχαριστειν οφειλομεν τω θεω παντοτε περι υμων αδελφοι καθως αξιον εστιν οτι υπεραυξανει η πιστις υμων και πλεοναζει η αγαπη ενος εκαστου παντων υμων εις αλληλους
@@ -45,13 +65,13 @@
 				</p>
 				<p><sup>12</sup> οπως ενδοξασθη το ονομα του κυριου ημων ιησου εν υμιν και υμεις εν αυτω κατα την χαριν του θεου ημων και κυριου ιησου χριστου
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 2</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 2</h2>
 				<p><sup>1</sup> ερωτωμεν δε υμας αδελφοι υπερ της παρουσιας του κυριου  ημων {VAR1: [ημων] } {VAR2: ημων } ιησου χριστου και ημων επισυναγωγης επ αυτον
 				</p>
+			</div>
 				<p><sup>2</sup> εις το μη ταχεως σαλευθηναι υμας απο του νοος μηδε θροεισθαι μητε δια πνευματος μητε δια λογου μητε δι επιστολης ως δι ημων ως οτι ενεστηκεν η ημερα του κυριου
 				</p>
 				<p><sup>3</sup> μη τις υμας εξαπατηση κατα μηδενα τροπον οτι εαν μη ελθη η αποστασια πρωτον και αποκαλυφθη ο ανθρωπος της ανομιας ο υιος της απωλειας
@@ -84,13 +104,13 @@
 				</p>
 				<p><sup>17</sup> παρακαλεσαι υμων τας καρδιας και στηριξαι εν παντι εργω και λογω αγαθω
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 3</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 3</h2>
 				<p><sup>1</sup> το λοιπον προσευχεσθε αδελφοι περι ημων ινα ο λογος του κυριου τρεχη και δοξαζηται καθως και προς υμας
 				</p>
+			</div>
 				<p><sup>2</sup> και ινα ρυσθωμεν απο των ατοπων και πονηρων ανθρωπων ου γαρ παντων η πιστις
 				</p>
 				<p><sup>3</sup> πιστος δε εστιν ο κυριος ος στηριξει υμας και φυλαξει απο του πονηρου
@@ -125,7 +145,6 @@
 				</p>
 				<p><sup>18</sup> η χαρις του κυριου ημων ιησου χριστου μετα παντων υμων
 				</p>
-			</div>
 		</div>
 	</div>
 

@@ -3,14 +3,33 @@
         <head>
           <meta charset='utf-8'/>
           <style>
-            div.chapters {
-              -webkit-columns: auto 2; /* Chrome, Safari, Opera */
-              -moz-columns: auto 2; /* Firefox */
-              columns: auto 2;
+            @media screen {
+              div.chapter {
+                margin-bottom: 3em;
+                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+                -moz-columns: auto 2; /* Firefox */
+                columns: auto 2;
+              }
+              p {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
+              }
             }
             @media print {
+              div.chapters {
+                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+                -moz-columns: auto 2; /* Firefox */
+                columns: auto 2;
+                widows: 3;
+                orphans: 3;
+              }
               p { page-break-inside: avoid; }
-              div.verses { page-break-before: never; }
+              div.orphan {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid; 
+              }
             }
           </style>
         </head>
@@ -19,10 +38,11 @@
 	<h1>2Peter</h1>
 	<div class='chapters'>
 		<div class='chapter'>
-			<h2>Chapter 1</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 1</h2>
 				<p><sup>1</sup>  σιμων {VAR1: σιμων } {VAR2: συμεων } πετρος δουλος και αποστολος ιησου χριστου τοις ισοτιμον ημιν λαχουσιν πιστιν εν δικαιοσυνη του θεου ημων και σωτηρος ιησου χριστου
 				</p>
+			</div>
 				<p><sup>2</sup> χαρις υμιν και ειρηνη πληθυνθειη εν επιγνωσει του θεου και ιησου του κυριου ημων
 				</p>
 				<p><sup>3</sup> ως παντα ημιν της θειας δυναμεως αυτου τα προς ζωην και ευσεβειαν δεδωρημενης δια της επιγνωσεως του καλεσαντος ημας  ιδια δοξη και αρετη {VAR1: δια δοξης και αρετης } {VAR2: ιδια δοξη και αρετη }
@@ -63,13 +83,13 @@
 				</p>
 				<p><sup>21</sup> ου γαρ θεληματι ανθρωπου ηνεχθη προφητεια ποτε αλλα υπο πνευματος αγιου φερομενοι ελαλησαν απο θεου ανθρωποι
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 2</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 2</h2>
 				<p><sup>1</sup> εγενοντο δε και ψευδοπροφηται εν τω λαω ως και εν υμιν εσονται ψευδοδιδασκαλοι οιτινες παρεισαξουσιν αιρεσεις απωλειας και τον αγορασαντα αυτους δεσποτην αρνουμενοι επαγοντες εαυτοις ταχινην απωλειαν
 				</p>
+			</div>
 				<p><sup>2</sup> και πολλοι εξακολουθησουσιν αυτων ταις ασελγειαις δι ους η οδος της αληθειας βλασφημηθησεται
 				</p>
 				<p><sup>3</sup> και εν πλεονεξια πλαστοις λογοις υμας εμπορευσονται οις το κριμα εκπαλαι ουκ αργει και η απωλεια αυτων ου νυσταζει
@@ -112,13 +132,13 @@
 				</p>
 				<p><sup>22</sup> συμβεβηκεν αυτοις το της αληθους παροιμιας κυων επιστρεψας επι το ιδιον εξεραμα και υς λουσαμενη εις κυλισμον βορβορου
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 3</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 3</h2>
 				<p><sup>1</sup> ταυτην ηδη αγαπητοι δευτεραν υμιν γραφω επιστολην εν αις διεγειρω υμων εν υπομνησει την ειλικρινη διανοιαν
 				</p>
+			</div>
 				<p><sup>2</sup> μνησθηναι των προειρημενων ρηματων υπο των αγιων προφητων και της των αποστολων υμων εντολης του κυριου και σωτηρος
 				</p>
 				<p><sup>3</sup> τουτο πρωτον γινωσκοντες οτι ελευσονται επ εσχατων των ημερων εν {VAR1: εν } {VAR2: [εν] } εμπαιγμονη εμπαικται κατα τας ιδιας επιθυμιας αυτων πορευομενοι
@@ -153,7 +173,6 @@
 				</p>
 				<p><sup>18</sup> αυξανετε δε εν χαριτι και γνωσει του κυριου ημων και σωτηρος ιησου χριστου αυτω η δοξα και νυν και εις ημεραν αιωνος αμην {VAR2: [αμην] }
 				</p>
-			</div>
 		</div>
 	</div>
 

@@ -3,14 +3,33 @@
         <head>
           <meta charset='utf-8'/>
           <style>
-            div.chapters {
-              -webkit-columns: auto 2; /* Chrome, Safari, Opera */
-              -moz-columns: auto 2; /* Firefox */
-              columns: auto 2;
+            @media screen {
+              div.chapter {
+                margin-bottom: 3em;
+                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+                -moz-columns: auto 2; /* Firefox */
+                columns: auto 2;
+              }
+              p {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
+              }
             }
             @media print {
+              div.chapters {
+                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+                -moz-columns: auto 2; /* Firefox */
+                columns: auto 2;
+                widows: 3;
+                orphans: 3;
+              }
               p { page-break-inside: avoid; }
-              div.verses { page-break-before: never; }
+              div.orphan {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid; 
+              }
             }
           </style>
         </head>
@@ -19,10 +38,11 @@
 	<h1>Galatians</h1>
 	<div class='chapters'>
 		<div class='chapter'>
-			<h2>Chapter 1</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 1</h2>
 				<p><sup>1</sup> παυλος αποστολος ουκ απ ανθρωπων ουδε δι ανθρωπου αλλα δια ιησου χριστου και θεου πατρος του εγειραντος αυτον εκ νεκρων
 				</p>
+			</div>
 				<p><sup>2</sup> και οι συν εμοι παντες αδελφοι ταις εκκλησιαις της γαλατιας
 				</p>
 				<p><sup>3</sup> χαρις υμιν και ειρηνη απο θεου πατρος ημων και κυριου ιησου χριστου
@@ -69,13 +89,13 @@
 				</p>
 				<p><sup>24</sup> και εδοξαζον εν εμοι τον θεον
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 2</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 2</h2>
 				<p><sup>1</sup> επειτα δια δεκατεσσαρων ετων παλιν ανεβην εις ιεροσολυμα μετα βαρναβα συμπαραλαβων και τιτον
 				</p>
+			</div>
 				<p><sup>2</sup> ανεβην δε κατα αποκαλυψιν και ανεθεμην αυτοις το ευαγγελιον ο κηρυσσω εν τοις εθνεσιν κατ ιδιαν δε τοις δοκουσιν μη πως εις κενον τρεχω η εδραμον
 				</p>
 				<p><sup>3</sup> αλλ ουδε τιτος ο συν εμοι ελλην ων ηναγκασθη περιτμηθηναι
@@ -116,13 +136,13 @@
 				</p>
 				<p><sup>21</sup> ουκ αθετω την χαριν του θεου ει γαρ δια νομου δικαιοσυνη αρα χριστος δωρεαν απεθανεν
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 3</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 3</h2>
 				<p><sup>1</sup> ω ανοητοι γαλαται τις υμας εβασκανεν οις κατ οφθαλμους ιησους χριστος προεγραφη εσταυρωμενος
 				</p>
+			</div>
 				<p><sup>2</sup> τουτο μονον θελω μαθειν αφ υμων εξ εργων νομου το πνευμα ελαβετε η εξ ακοης πιστεως
 				</p>
 				<p><sup>3</sup> ουτως ανοητοι εστε εναρξαμενοι πνευματι νυν σαρκι επιτελεισθε
@@ -179,13 +199,13 @@
 				</p>
 				<p><sup>29</sup> ει δε υμεις χριστου αρα του αβρααμ σπερμα εστε κατ επαγγελιαν κληρονομοι
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 4</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 4</h2>
 				<p><sup>1</sup> λεγω δε εφ οσον χρονον ο κληρονομος νηπιος εστιν ουδεν διαφερει δουλου κυριος παντων ων
 				</p>
+			</div>
 				<p><sup>2</sup> αλλα υπο επιτροπους εστιν και οικονομους αχρι της προθεσμιας του πατρος
 				</p>
 				<p><sup>3</sup> ουτως και ημεις οτε ημεν νηπιοι υπο τα στοιχεια του κοσμου ημεθα δεδουλωμενοι
@@ -246,13 +266,13 @@
 				</p>
 				<p><sup>31</sup> διο αδελφοι ουκ εσμεν παιδισκης τεκνα αλλα της ελευθερας
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 5</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 5</h2>
 				<p><sup>1</sup> τη ελευθερια ημας χριστος ηλευθερωσεν στηκετε ουν και μη παλιν ζυγω δουλειας ενεχεσθε
 				</p>
+			</div>
 				<p><sup>2</sup> ιδε εγω παυλος λεγω υμιν οτι εαν περιτεμνησθε χριστος υμας ουδεν ωφελησει
 				</p>
 				<p><sup>3</sup> μαρτυρομαι δε παλιν παντι ανθρωπω περιτεμνομενω οτι οφειλετης εστιν ολον τον νομον ποιησαι
@@ -303,13 +323,13 @@
 				</p>
 				<p><sup>26</sup> μη γινωμεθα κενοδοξοι αλληλους προκαλουμενοι αλληλοις φθονουντες
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 6</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 6</h2>
 				<p><sup>1</sup> αδελφοι εαν και προλημφθη ανθρωπος εν τινι παραπτωματι υμεις οι πνευματικοι καταρτιζετε τον τοιουτον εν πνευματι πραυτητος σκοπων σεαυτον μη και συ πειρασθης
 				</p>
+			</div>
 				<p><sup>2</sup> αλληλων τα βαρη βασταζετε και ουτως αναπληρωσετε {VAR1: αναπληρωσατε } {VAR2: αναπληρωσετε } τον νομον του χριστου
 				</p>
 				<p><sup>3</sup> ει γαρ δοκει τις ειναι τι μηδεν ων φρεναπατα εαυτον
@@ -344,7 +364,6 @@
 				</p>
 				<p><sup>18</sup> η χαρις του κυριου ημων {VAR1: [ημων] } {VAR2: ημων } ιησου χριστου μετα του πνευματος υμων αδελφοι αμην
 				</p>
-			</div>
 		</div>
 	</div>
 

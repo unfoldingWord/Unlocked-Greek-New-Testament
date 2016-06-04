@@ -53,12 +53,14 @@ class GNTParser
     bible.each do |book, book_data|
       book_html = ''
       book_data.each do |chapter, chapter_data|
-        chapter_html = "\n\t\t\t<h2>Chapter #{chapter}</h2>\n\t\t\t<div class='verses'>"
+        chapter_html = "\n\t\t\t<div class='orphan'>\n\t\t\t\t<h2>Chapter #{chapter}</h2>"
         chapter_data.each do |verse, text|
           verse_html = "\n\t\t\t\t<p><sup>#{verse}</sup> #{text}\n\t\t\t\t</p>"
+          if verse.to_i == 1
+            verse_html << "\n\t\t\t</div>"
+          end
           chapter_html << verse_html
         end
-        chapter_html << "\n\t\t\t</div>"
         book_html << "\n\t\t<div class='chapter'>#{chapter_html}\n\t\t</div>"
       end
       body = "\n\t<h1>#{book}</h1>\n\t<div class='chapters'>#{book_html}\n\t</div>\n"
@@ -67,14 +69,33 @@ class GNTParser
         <head>
           <meta charset='utf-8'/>
           <style>
-            div.chapters {
-              -webkit-columns: auto 2; /* Chrome, Safari, Opera */
-              -moz-columns: auto 2; /* Firefox */
-              columns: auto 2;
+            @media screen {
+              div.chapter {
+                margin-bottom: 3em;
+                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+                -moz-columns: auto 2; /* Firefox */
+                columns: auto 2;
+              }
+              p {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
+              }
             }
             @media print {
+              div.chapters {
+                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+                -moz-columns: auto 2; /* Firefox */
+                columns: auto 2;
+                widows: 3;
+                orphans: 3;
+              }
               p { page-break-inside: avoid; }
-              div.verses { page-break-before: never; }
+              div.orphan {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid; 
+              }
             }
           </style>
         </head>

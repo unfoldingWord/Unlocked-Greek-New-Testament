@@ -3,14 +3,33 @@
         <head>
           <meta charset='utf-8'/>
           <style>
-            div.chapters {
-              -webkit-columns: auto 2; /* Chrome, Safari, Opera */
-              -moz-columns: auto 2; /* Firefox */
-              columns: auto 2;
+            @media screen {
+              div.chapter {
+                margin-bottom: 3em;
+                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+                -moz-columns: auto 2; /* Firefox */
+                columns: auto 2;
+              }
+              p {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
+              }
             }
             @media print {
+              div.chapters {
+                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+                -moz-columns: auto 2; /* Firefox */
+                columns: auto 2;
+                widows: 3;
+                orphans: 3;
+              }
               p { page-break-inside: avoid; }
-              div.verses { page-break-before: never; }
+              div.orphan {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid; 
+              }
             }
           </style>
         </head>
@@ -19,10 +38,11 @@
 	<h1>Ephesians</h1>
 	<div class='chapters'>
 		<div class='chapter'>
-			<h2>Chapter 1</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 1</h2>
 				<p><sup>1</sup> παυλος αποστολος χριστου ιησου {ιησου χριστου ℵ A BYZ TR ST; χριστου ιησου 𝔭46 B NA28 WH SBL TRG TIS VST} δια θεληματος θεου τοις αγιοις τοις ουσιν {◇ πασιν τοις ουσιν εν εφεσω A BYZ TR ST TRG; τοις ουσιν [εν εφεσω] NA28 WH SBL TIS VST; ουσιν 𝔭46; τοις ουσιν ℵ B} και πιστοις εν χριστω ιησου
 				</p>
+			</div>
 				<p><sup>2</sup> χαρις υμιν και ειρηνη απο θεου πατρος ημων και κυριου ιησου χριστου
 				</p>
 				<p><sup>3</sup> ευλογητος ο θεος και πατηρ { - B; πατηρ ℵ A NA28 WH SBL BYZ TR ST TRG TIS VST} του κυριου { + και σωτηροσ ℵ; - B A NA28 WH SBL BYZ TR ST TRG TIS VST} ημων ιησου χριστου ο ευλογησας ημας { - ℵ*; ημας 𝔭46 ℵ¹ B A NA28 WH SBL BYZ TR ST TRG TIS VST } εν παση ευλογια πνευματικη εν τοις επουρανιοις εν { - ST; εν 𝔭46 ℵ B A NA28 WH SBL BYZ TR TRG TIS VST } χριστω
@@ -67,13 +87,13 @@
 				</p>
 				<p><sup>23</sup> ητις εστιν το σωμα αυτου το πληρωμα του τα παντα εν πασιν πληρουμενου
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 2</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 2</h2>
 				<p><sup>1</sup> και υμας οντας νεκρους τοις παραπτωμασιν και ταις αμαρτιαις υμων
 				</p>
+			</div>
 				<p><sup>2</sup> εν αις ποτε περιεπατησατε κατα τον αιωνα του κοσμου τουτου κατα τον αρχοντα της εξουσιας του αερος του πνευματος του νυν ενεργουντος εν τοις υιοις της απειθειας
 				</p>
 				<p><sup>3</sup> εν οις και ημεις παντες ανεστραφημεν ποτε εν ταις επιθυμιαις της σαρκος ημων ποιουντες τα θεληματα της σαρκος και των διανοιων και ημεθα τεκνα φυσει οργης ως και οι λοιποι
@@ -116,13 +136,13 @@
 				</p>
 				<p><sup>22</sup> εν ω και υμεις συνοικοδομεισθε εις κατοικητηριον του θεου εν πνευματι
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 3</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 3</h2>
 				<p><sup>1</sup> τουτου χαριν εγω παυλος ο δεσμιος του χριστου ιησου {- 01*; [ιησου] NA28; ιησου 𝔭46 01¹ 03 02 04 WH SBL BYZ TR ST TRG TIS VST} υπερ υμων των εθνων
 				</p>
+			</div>
 				<p><sup>2</sup> ει γε ηκουσατε την οικονομιαν της χαριτος του θεου της δοθεισης μοι εις υμας
 				</p>
 				<p><sup>3</sup> [οτι] κατα αποκαλυψιν εγνωρισθη μοι το μυστηριον καθως προεγραψα εν ολιγω
@@ -163,13 +183,13 @@
 				</p>
 				<p><sup>21</sup> αυτω η δοξα εν τη εκκλησια και εν χριστω ιησου εις πασας τας γενεας του αιωνος των αιωνων αμην
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 4</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 4</h2>
 				<p><sup>1</sup> παρακαλω ουν υμας εγω ο δεσμιος εν κυριω αξιως περιπατησαι της κλησεως ης εκληθητε
 				</p>
+			</div>
 				<p><sup>2</sup> μετα πασης ταπεινοφροσυνης και πραυτητος μετα μακροθυμιας ανεχομενοι αλληλων εν αγαπη
 				</p>
 				<p><sup>3</sup> σπουδαζοντες τηρειν την ενοτητα του πνευματος εν τω συνδεσμω της ειρηνης
@@ -232,13 +252,13 @@
 				</p>
 				<p><sup>32</sup> γινεσθε [δε] εις αλληλους χρηστοι ευσπλαγχνοι χαριζομενοι εαυτοις καθως και ο θεος εν χριστω εχαρισατο υμιν
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 5</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 5</h2>
 				<p><sup>1</sup> γινεσθε ουν μιμηται του θεου ως τεκνα αγαπητα
 				</p>
+			</div>
 				<p><sup>2</sup> και περιπατειτε εν αγαπη καθως και ο χριστος ηγαπησεν ημας {υμας 01 03 02 WH TRG TIS; ημας 𝔭46 𝔭49 NA28 SBL BYZ TR ST VST} και παρεδωκεν εαυτον υπερ ημων {VAR1: υμων } {VAR2: ημων } προσφοραν και θυσιαν τω θεω εις οσμην ευωδιας
 				</p>
 				<p><sup>3</sup> πορνεια δε και ακαθαρσια πασα η πλεονεξια μηδε ονομαζεσθω εν υμιν καθως πρεπει αγιοις
@@ -303,13 +323,13 @@
 				</p>
 				<p><sup>33</sup> πλην και υμεις οι καθ ενα εκαστος την εαυτου γυναικα ουτως αγαπατω ως εαυτον η δε γυνη ινα φοβηται τον ανδρα
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 6</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 6</h2>
 				<p><sup>1</sup> τα τεκνα υπακουετε τοις γονευσιν υμων [εν κυριω] τουτο γαρ εστιν δικαιον
 				</p>
+			</div>
 				<p><sup>2</sup> τιμα τον πατερα σου και την μητερα ητις εστιν εντολη πρωτη εν επαγγελια
 				</p>
 				<p><sup>3</sup> ινα ευ σοι γενηται και εση μακροχρονιος επι της γης
@@ -356,7 +376,6 @@
 				</p>
 				<p><sup>24</sup> η χαρις μετα παντων των αγαπωντων τον κυριον ημων ιησουν χριστον εν αφθαρσια
 				</p>
-			</div>
 		</div>
 	</div>
 

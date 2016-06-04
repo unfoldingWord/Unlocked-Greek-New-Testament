@@ -3,14 +3,33 @@
         <head>
           <meta charset='utf-8'/>
           <style>
-            div.chapters {
-              -webkit-columns: auto 2; /* Chrome, Safari, Opera */
-              -moz-columns: auto 2; /* Firefox */
-              columns: auto 2;
+            @media screen {
+              div.chapter {
+                margin-bottom: 3em;
+                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+                -moz-columns: auto 2; /* Firefox */
+                columns: auto 2;
+              }
+              p {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid;
+              }
             }
             @media print {
+              div.chapters {
+                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+                -moz-columns: auto 2; /* Firefox */
+                columns: auto 2;
+                widows: 3;
+                orphans: 3;
+              }
               p { page-break-inside: avoid; }
-              div.verses { page-break-before: never; }
+              div.orphan {
+                -webkit-column-break-inside: avoid;
+                page-break-inside: avoid;
+                break-inside: avoid; 
+              }
             }
           </style>
         </head>
@@ -19,10 +38,11 @@
 	<h1>2Timothy</h1>
 	<div class='chapters'>
 		<div class='chapter'>
-			<h2>Chapter 1</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 1</h2>
 				<p><sup>1</sup> παυλος αποστολος χριστου ιησου δια θεληματος θεου κατ επαγγελιαν ζωης της εν χριστω ιησου
 				</p>
+			</div>
 				<p><sup>2</sup> τιμοθεω αγαπητω τεκνω χαρις ελεος ειρηνη απο θεου πατρος και χριστου ιησου του κυριου ημων
 				</p>
 				<p><sup>3</sup> χαριν εχω τω θεω ω λατρευω απο προγονων εν καθαρα συνειδησει ως αδιαλειπτον εχω την περι σου μνειαν εν ταις δεησεσιν μου νυκτος και ημερας
@@ -57,13 +77,13 @@
 				</p>
 				<p><sup>18</sup> δωη αυτω ο κυριος ευρειν ελεος παρα κυριου εν εκεινη τη ημερα και οσα εν εφεσω διηκονησεν βελτιον συ γινωσκεις
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 2</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 2</h2>
 				<p><sup>1</sup> συ ουν τεκνον μου ενδυναμου εν τη χαριτι τη εν χριστω ιησου
 				</p>
+			</div>
 				<p><sup>2</sup> και α ηκουσας παρ εμου δια πολλων μαρτυρων ταυτα παραθου πιστοις ανθρωποις οιτινες ικανοι εσονται και ετερους διδαξαι
 				</p>
 				<p><sup>3</sup> συγκακοπαθησον ως καλος στρατιωτης χριστου ιησου
@@ -114,13 +134,13 @@
 				</p>
 				<p><sup>26</sup> και ανανηψωσιν εκ της του διαβολου παγιδος εζωγρημενοι υπ αυτου εις το εκεινου θελημα
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 3</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 3</h2>
 				<p><sup>1</sup> τουτο δε γινωσκε οτι εν εσχαταις ημεραις ενστησονται καιροι χαλεποι
 				</p>
+			</div>
 				<p><sup>2</sup> εσονται γαρ οι ανθρωποι φιλαυτοι φιλαργυροι αλαζονες υπερηφανοι βλασφημοι γονευσιν απειθεις αχαριστοι ανοσιοι
 				</p>
 				<p><sup>3</sup> αστοργοι ασπονδοι διαβολοι ακρατεις ανημεροι αφιλαγαθοι
@@ -153,13 +173,13 @@
 				</p>
 				<p><sup>17</sup> ινα αρτιος η ο του θεου ανθρωπος προς παν εργον αγαθον εξηρτισμενος
 				</p>
-			</div>
 		</div>
 		<div class='chapter'>
-			<h2>Chapter 4</h2>
-			<div class='verses'>
+			<div class='orphan'>
+				<h2>Chapter 4</h2>
 				<p><sup>1</sup> διαμαρτυρομαι ενωπιον του θεου και χριστου ιησου του μελλοντος κρινειν ζωντας και νεκρους και την επιφανειαν αυτου και την βασιλειαν αυτου
 				</p>
+			</div>
 				<p><sup>2</sup> κηρυξον τον λογον επιστηθι ευκαιρως ακαιρως ελεγξον επιτιμησον παρακαλεσον εν παση μακροθυμια και διδαχη
 				</p>
 				<p><sup>3</sup> εσται γαρ καιρος οτε της υγιαινουσης διδασκαλιας ουκ ανεξονται αλλα κατα τας ιδιας επιθυμιας εαυτοις επισωρευσουσιν διδασκαλους κνηθομενοι την ακοην
@@ -202,7 +222,6 @@
 				</p>
 				<p><sup>22</sup> ο κυριος μετα του πνευματος σου η χαρις μεθ υμων
 				</p>
-			</div>
 		</div>
 	</div>
 
