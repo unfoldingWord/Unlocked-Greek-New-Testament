@@ -72,6 +72,9 @@ class GNTParser
             h1, h2 {
               text-align: center;
             }
+            p {
+              text-align: justify;
+            }
             @media screen {
               div.chapter {
                 margin-bottom: 3em;
