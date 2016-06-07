@@ -1,104 +1,155 @@
 <!DOCTYPE html>
-      <html>
-        <head>
-          <meta charset='utf-8'/>
-          <style>
-            h1, h2 {
-              text-align: center;
-            }
-            p {
-              text-align: justify;
-            }
-            @media screen {
-              div.chapter {
-                margin-bottom: 3em;
-                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
-                -moz-columns: auto 2; /* Firefox */
-                columns: auto 2;
-              }
-              p {
-                -webkit-column-break-inside: avoid;
-                page-break-inside: avoid;
-                break-inside: avoid;
-              }
-            }
-            @media print {
-              div.chapters {
-                -webkit-columns: auto 2; /* Chrome, Safari, Opera */
-                -moz-columns: auto 2; /* Firefox */
-                columns: auto 2;
-                widows: 3;
-                orphans: 3;
-              }
-              p { page-break-inside: avoid; }
-              div.orphan {
-                -webkit-column-break-inside: avoid;
-                page-break-inside: avoid;
-                break-inside: avoid; 
-              }
-            }
-          </style>
-        </head>
-        <body>
-          
-	<h1>Philemon</h1>
+<html>
+  <head>
+    <meta charset='utf-8'/>
+    <style>
+      #cover {
+        font-family: arial; 
+      }
+      h1, h2, h3, #cover {
+        text-align: center;
+      }
+      .icon img {
+        width: 144px;
+      }
+      p {
+        text-align: justify;
+      }
+      .apparatus p {
+        margin: 0;
+      }
+      .verse_marker, .apparatus_marker {
+        font-size: 0.8em;
+      }
+      .apparatus_marker {
+        font-style: italic;
+      }
+
+      @media screen {
+        div.chapter {
+          margin-bottom: 3em;
+          -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+          -moz-columns: auto 2; /* Firefox */
+          columns: auto 2;
+        }
+        p {
+          -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+          break-inside: avoid;
+        }
+      }
+      @media print {
+        @page:right {
+          margin-left: 1in;
+        }
+        @page:left {
+          margin-right: 1in;
+        }
+        body {
+          font-size: 80%;
+        }
+        div#cover {
+          padding-top: 33%;
+          page-break-after: always;
+        }
+        h1.book_name {
+          page-break-before: always;
+        }
+        .apparatus p {
+          font-size: 0.9em;
+        }
+        div.chapters {
+          -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+          -moz-columns: auto 2; /* Firefox */
+          columns: auto 2;
+          widows: 3;
+          orphans: 3;
+        }
+        p { page-break-inside: avoid; }
+        div.orphan {
+          -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+          break-inside: avoid; 
+        }
+        span.footnote {
+          float: footnote;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    
+<div class='book'><h1 class='book_name'>Philemon</h1>
 	<div class='chapters'>
 		<div class='chapter'>
 			<div class='orphan'>
 				<h2>Chapter 1</h2>
-				<p><sup>1</sup> παυλος δεσμιος χριστου ιησου και τιμοθεος ο αδελφος φιλημονι τω αγαπητω και συνεργω ημων
+				<p><sup class='verse_marker'>1</sup> παυλος δεσμιος χριστου ιησου και τιμοθεος ο αδελφος φιλημονι τω αγαπητω και συνεργω ημων
 				</p>
 			</div>
-				<p><sup>2</sup> και απφια τη αδελφη και αρχιππω τω συστρατιωτη ημων και τη κατ οικον σου εκκλησια
+				<p><sup class='verse_marker'>2</sup> και απφια τη αδελφη και αρχιππω τω συστρατιωτη ημων και τη κατ οικον σου εκκλησια
 				</p>
-				<p><sup>3</sup> χαρις υμιν και ειρηνη απο θεου πατρος ημων και κυριου ιησου χριστου
+				<p><sup class='verse_marker'>3</sup> χαρις υμιν και ειρηνη απο θεου πατρος ημων και κυριου ιησου χριστου
 				</p>
-				<p><sup>4</sup> ευχαριστω τω θεω μου παντοτε μνειαν σου ποιουμενος επι των προσευχων μου
+				<p><sup class='verse_marker'>4</sup> ευχαριστω τω θεω μου παντοτε μνειαν σου ποιουμενος επι των προσευχων μου
 				</p>
-				<p><sup>5</sup> ακουων σου την αγαπην και την πιστιν ην εχεις εις {VAR1: εις } {VAR2: προς } τον κυριον ιησουν και εις παντας τους αγιους
+				<p><sup class='verse_marker'>5</sup> ακουων σου την αγαπην και την πιστιν ην εχεις εις <sup class='apparatus_marker'>5.1</sup> <sup class='apparatus_marker'>5.2</sup> τον κυριον ιησουν και εις παντας τους αγιους
 				</p>
-				<p><sup>6</sup> οπως η κοινωνια της πιστεως σου ενεργης γενηται εν επιγνωσει παντος αγαθου  {VAR1: [του] } {VAR2: του } εν ημιν εις χριστον
+				<p><sup class='verse_marker'>6</sup> οπως η κοινωνια της πιστεως σου ενεργης γενηται εν επιγνωσει παντος αγαθου  <sup class='apparatus_marker'>6.1</sup> <sup class='apparatus_marker'>6.2</sup> εν ημιν εις χριστον
 				</p>
-				<p><sup>7</sup> χαραν γαρ πολλην εσχον και παρακλησιν επι τη αγαπη σου οτι τα σπλαγχνα των αγιων αναπεπαυται δια σου αδελφε
+				<p><sup class='verse_marker'>7</sup> χαραν γαρ πολλην εσχον και παρακλησιν επι τη αγαπη σου οτι τα σπλαγχνα των αγιων αναπεπαυται δια σου αδελφε
 				</p>
-				<p><sup>8</sup> διο πολλην εν χριστω παρρησιαν εχων επιτασσειν σοι το ανηκον
+				<p><sup class='verse_marker'>8</sup> διο πολλην εν χριστω παρρησιαν εχων επιτασσειν σοι το ανηκον
 				</p>
-				<p><sup>9</sup> δια την αγαπην μαλλον παρακαλω τοιουτος ων ως παυλος πρεσβυτης νυνι δε και δεσμιος χριστου ιησου
+				<p><sup class='verse_marker'>9</sup> δια την αγαπην μαλλον παρακαλω τοιουτος ων ως παυλος πρεσβυτης νυνι δε και δεσμιος χριστου ιησου
 				</p>
-				<p><sup>10</sup> παρακαλω σε περι του εμου τεκνου ον εγεννησα εν τοις δεσμοις ονησιμον
+				<p><sup class='verse_marker'>10</sup> παρακαλω σε περι του εμου τεκνου ον εγεννησα εν τοις δεσμοις ονησιμον
 				</p>
-				<p><sup>11</sup> τον ποτε σοι αχρηστον νυνι δε  {VAR2: [και] } σοι και εμοι ευχρηστον
+				<p><sup class='verse_marker'>11</sup> τον ποτε σοι αχρηστον νυνι δε  <sup class='apparatus_marker'>11.1</sup> σοι και εμοι ευχρηστον
 				</p>
-				<p><sup>12</sup> ον ανεπεμψα σοι αυτον τουτ εστιν τα εμα σπλαγχνα
+				<p><sup class='verse_marker'>12</sup> ον ανεπεμψα σοι αυτον τουτ εστιν τα εμα σπλαγχνα
 				</p>
-				<p><sup>13</sup> ον εγω εβουλομην προς εμαυτον κατεχειν ινα υπερ σου μοι διακονη εν τοις δεσμοις του ευαγγελιου
+				<p><sup class='verse_marker'>13</sup> ον εγω εβουλομην προς εμαυτον κατεχειν ινα υπερ σου μοι διακονη εν τοις δεσμοις του ευαγγελιου
 				</p>
-				<p><sup>14</sup> χωρις δε της σης γνωμης ουδεν ηθελησα ποιησαι ινα μη ως κατα αναγκην το αγαθον σου η αλλα κατα εκουσιον
+				<p><sup class='verse_marker'>14</sup> χωρις δε της σης γνωμης ουδεν ηθελησα ποιησαι ινα μη ως κατα αναγκην το αγαθον σου η αλλα κατα εκουσιον
 				</p>
-				<p><sup>15</sup> ταχα γαρ δια τουτο εχωρισθη προς ωραν ινα αιωνιον αυτον απεχης
+				<p><sup class='verse_marker'>15</sup> ταχα γαρ δια τουτο εχωρισθη προς ωραν ινα αιωνιον αυτον απεχης
 				</p>
-				<p><sup>16</sup> ουκετι ως δουλον αλλ υπερ δουλον αδελφον αγαπητον μαλιστα εμοι ποσω δε μαλλον σοι και εν σαρκι και εν κυριω
+				<p><sup class='verse_marker'>16</sup> ουκετι ως δουλον αλλ υπερ δουλον αδελφον αγαπητον μαλιστα εμοι ποσω δε μαλλον σοι και εν σαρκι και εν κυριω
 				</p>
-				<p><sup>17</sup> ει ουν με εχεις κοινωνον προσλαβου αυτον ως εμε
+				<p><sup class='verse_marker'>17</sup> ει ουν με εχεις κοινωνον προσλαβου αυτον ως εμε
 				</p>
-				<p><sup>18</sup> ει δε τι ηδικησεν σε η οφειλει τουτο εμοι ελλογα
+				<p><sup class='verse_marker'>18</sup> ει δε τι ηδικησεν σε η οφειλει τουτο εμοι ελλογα
 				</p>
-				<p><sup>19</sup> εγω παυλος εγραψα τη εμη χειρι εγω αποτισω ινα μη λεγω σοι οτι και σεαυτον μοι προσοφειλεις
+				<p><sup class='verse_marker'>19</sup> εγω παυλος εγραψα τη εμη χειρι εγω αποτισω ινα μη λεγω σοι οτι και σεαυτον μοι προσοφειλεις
 				</p>
-				<p><sup>20</sup> ναι αδελφε εγω σου οναιμην εν κυριω αναπαυσον μου τα σπλαγχνα εν χριστω
+				<p><sup class='verse_marker'>20</sup> ναι αδελφε εγω σου οναιμην εν κυριω αναπαυσον μου τα σπλαγχνα εν χριστω
 				</p>
-				<p><sup>21</sup> πεποιθως τη υπακοη σου εγραψα σοι ειδως οτι και υπερ α λεγω ποιησεις
+				<p><sup class='verse_marker'>21</sup> πεποιθως τη υπακοη σου εγραψα σοι ειδως οτι και υπερ α λεγω ποιησεις
 				</p>
-				<p><sup>22</sup> αμα δε και ετοιμαζε μοι ξενιαν ελπιζω γαρ οτι δια των προσευχων υμων χαρισθησομαι υμιν
+				<p><sup class='verse_marker'>22</sup> αμα δε και ετοιμαζε μοι ξενιαν ελπιζω γαρ οτι δια των προσευχων υμων χαρισθησομαι υμιν
 				</p>
-				<p><sup>23</sup> ασπαζεται σε επαφρας ο συναιχμαλωτος μου εν χριστω ιησου
+				<p><sup class='verse_marker'>23</sup> ασπαζεται σε επαφρας ο συναιχμαλωτος μου εν χριστω ιησου
 				</p>
-				<p><sup>24</sup> μαρκος αρισταρχος δημας λουκας οι συνεργοι μου
+				<p><sup class='verse_marker'>24</sup> μαρκος αρισταρχος δημας λουκας οι συνεργοι μου
 				</p>
-				<p><sup>25</sup> η χαρις του κυριου ιησου χριστου μετα του πνευματος υμων
+				<p><sup class='verse_marker'>25</sup> η χαρις του κυριου ιησου χριστου μετα του πνευματος υμων
 				</p>
+			<hr/>
+			<div class='apparatus'>
+				<p><sup class='apparatus_marker'>5.1</sup> VAR1: εις 
+				</p>
+				<p><sup class='apparatus_marker'>5.2</sup> VAR2: προς 
+				</p>
+				<p><sup class='apparatus_marker'>6.1</sup> VAR1: [του] 
+				</p>
+				<p><sup class='apparatus_marker'>6.2</sup> VAR2: του 
+				</p>
+				<p><sup class='apparatus_marker'>11.1</sup> VAR2: [και] 
+				</p>
+			</div>
 		</div>
 	</div>
-
-        </body>
-      </html>
+</div>
+  </body>
+</html>
